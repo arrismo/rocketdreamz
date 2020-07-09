@@ -1,6 +1,3 @@
-@extends('layouts.app')
- 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,16 +12,6 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-
-
-
-
-  
-
-
-
-
-
 <style type="text/css">
 	.spacing{
 		margin-left: -1rem !important;
@@ -36,10 +23,46 @@
 
 </head>
 <body> 
+
+
+  <ul class="navbar-nav" style="padding-left: -10px">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('LOGIN') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('REGISTER') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
 	<div class="container">
 		<div class="row">
 		  <h1> Dream List</h1>
 	    </div>
+
+
+
 
    	
 		<form action="{{ route('tasks.store') }}"  method='POST' class="form-inline">
@@ -49,7 +72,7 @@
   			<div class="form-group spacing mb-2">
    				 <input type="text" name="newTaskName" class="form-control" >
   			</div>
-  				<input type="submit" class="btn btn-primary mb-2" value='Add Task'>
+  				<input type="submit" class="btn  mb-2" value='Add Task'>
 
 			</form>
 

@@ -78,7 +78,26 @@
 
 
 
+
 @if (count($storedTasks) > 0)
+<div class="card" style="width: 18rem;">
+  @foreach ($storedTasks as $storedTask)
+  <div class="card-body">
+    <h5 class="card-title">{{ $storedTask->name }} </h5>
+    @endforeach
+
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+    
+  </div>
+</div>
+
+   @endif
+
+   <!-- 
+@if (count($storedTasks) > 0)
+
+
       <table class="table">
         <thead>
           <th>Task #</th>
@@ -101,7 +120,7 @@
         </tbody>
       </table>
     @endif
-
+-->
 	
 </body> 
 </html>

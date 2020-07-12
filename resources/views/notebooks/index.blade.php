@@ -86,7 +86,7 @@
                         
                         <p> some text </p>
                         <div class="card-footer">
-                            <a class="card-link" href="#">
+                            <a class="card-link" href="/notebooks/{{$notebook->id}}">
                                 Edit Notebook
                             </a>
                             <form action="#" class="pull-xs-right5 card-link" method="POST" style="display:inline">
@@ -104,79 +104,6 @@
 
                 <!-- end of notebook 1 -->
 
-                 <div class="col-sm-6 col-md-3">
-                    <div class="card">
-                        <div class="card-block">
-                            <a href="#">
-                                <h4 class="card-header">
-                                    Personal
-                                </h4>
-                            </a>
-                        </div>
-
-                        <p> some text </p>
-                        
-                        <div class="card-footer">
-                            <a class="card-link" href="#">
-                                Edit Notebook
-                            </a>
-                            <form action="#" class="pull-xs-right5 card-link" method="POST" style="display:inline">
-                                <input class="btn btn-sm btn-danger" type="submit" value="Delete">
-                                </input>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-sm-6 col-md-3">
-                    <div class="card">
-                        <div class="card-block">
-                            <a href="#">
-                                <h4 class="card-header">
-                                    Personal
-                                </h4>
-                            </a>
-                        </div>
-
-                        <p> some text </p>
-                        
-                        <div class="card-footer">
-                            <a class="card-link" href="#">
-                                Edit Notebook
-                            </a>
-                            <form action="#" class="pull-xs-right5 card-link" method="POST" style="display:inline">
-                                <input class="btn btn-sm btn-danger" type="submit" value="Delete">
-                                </input>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-sm-6 col-md-3">
-                    <div class="card">
-                        <div class="card-block">
-                            <a href="#">
-                                <h4 class="card-header">
-                                    Personal
-                                </h4>
-                            </a>
-                        </div>
-
-                        <p> some text </p>
-                        
-                        <div class="card-footer">
-                            <a class="card-link" href="#">
-                                Edit Notebook
-                            </a>
-                            <form action="#" class="pull-xs-right5 card-link" method="POST" style="display:inline">
-                                <input class="btn btn-sm btn-danger" type="submit" value="Delete">
-                                </input>
-                            </form>
-                        </div>
-                    </div>
-                </div>
 
                           
 </div>

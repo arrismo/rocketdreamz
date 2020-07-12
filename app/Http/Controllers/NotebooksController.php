@@ -14,5 +14,44 @@ class NotebooksController extends Controller
 		return view('notebooks.index',compact('notebooks'));
 	}
 
+
+	public function create(){
+		return view('notebooks.create');
+	}
+
+
+	public function store(Request $request)
+	{
+
+		$dataInput= $request->all();
+		Notebook::create($dataInput);
+
+		return redirect('/notebooks');
+
+
+
+	}
+
+	public function edit($id){
+
+		$notebook=Notebook::where('id',$id)->first();
+
+		return view('notebooks.edit')->with('notebooks',$notebook);
+	}
+
+	public function update(Request $request,$id)
+	{
+		$notebook=Notebook::where('id',$id)->first();
+		$notebook->update($request->all());
+
+
+		return redirect('/notebooks');
+
+
+
+	}
+
+
+
 	    //
 }

@@ -71,12 +71,15 @@
 
                <div class="row" style="padding-left: 35px; padding-right: 30px;">
                
+               <!-- Notebook 1 -->
+
+               @foreach($notebooks as $notebook)
                 <div class="col-sm-6 col-md-3" >
                     <div class="card">
                         <div class="card-block">
                             <a href="#">
                                 <h4 class="card-header">
-                                    Personal
+                                    {{$notebook->name}}
                                 </h4>
                             </a>
                         </div>
@@ -93,6 +96,13 @@
                         </div>
                     </div>
                 </div>
+
+                @endforeach
+
+
+
+
+                <!-- end of notebook 1 -->
 
                  <div class="col-sm-6 col-md-3">
                     <div class="card">

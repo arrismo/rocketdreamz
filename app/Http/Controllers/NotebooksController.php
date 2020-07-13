@@ -2,16 +2,28 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\Auth;
+use App\Notebook;
+
 use Illuminate\Http\Request;
 
-use App\Notebook;
+
+
+
 
 class NotebooksController extends Controller
 {
 	public function index(){
-		$notebooks= Notebook::all();
+		
+
+		$user= Auth::user();
+		$notebooks=$user->notebooks;
+
 
 		return view('notebooks.index',compact('notebooks'));
+
+
 	}
 
 
@@ -24,7 +36,13 @@ class NotebooksController extends Controller
 	{
 
 		$dataInput= $request->all();
-		Notebook::create($dataInput);
+		$user= Auth::user();
+		$user->notebooks()->create($dataInput);
+
+
+
+
+		//Notebook::create($dataInput);
 
 		return redirect('/notebooks');
 
@@ -33,22 +51,43 @@ class NotebooksController extends Controller
 	}
 
 	public function edit($id){
+				$user= Auth::user();
+				$notebook=$user->notebooks()->find($id);
 
-		$notebook=Notebook::where('id',$id)->first();
+
+		//$notebook=Notebook::where('id',$id)->first();
 
 		return view('notebooks.edit')->with('notebooks',$notebook);
 	}
 
 	public function update(Request $request,$id)
 	{
-		$notebook=Notebook::where('id',$id)->first();
+					$user= Auth::user();
+					$notebook=$user->notebooks()->find($id);
+
+
+		//$notebook=Notebook::where('id',$id)->first();
 		$notebook->update($request->all());
 
 
 		return redirect('/notebooks');
 
 
+	}
 
+
+
+	public function destroy($id){
+
+				$user= Auth::user();
+				$notebook=$user->notebooks()->find($id);
+
+
+		//$notebook=Notebook::where('id',$id)->first();
+		$notebook->delete();
+
+
+		return redirect('/notebooks');
 	}
 
 

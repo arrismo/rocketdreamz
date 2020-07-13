@@ -52,7 +52,7 @@
 <div class="jumbotron">
 	<h1> Notebook </h1>
 	<p>
-	<a class="btn btn-lg btn-primary" href="" role="button"> Your Notebooks </a>
+	<a class="btn btn-lg btn-primary" href="/notebooks" role="button"> Your Notebooks </a>
 </p>
 </div>
 

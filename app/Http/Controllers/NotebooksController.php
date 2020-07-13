@@ -32,6 +32,17 @@ class NotebooksController extends Controller
 	}
 
 
+	public function show($id)
+	{
+		$notebook= Notebook::where('id',$id)->first();
+		$notes=$notebook->notes;
+
+		return view('notes.index', compact('notes','notebook'));
+
+
+	}
+
+
 	public function store(Request $request)
 	{
 

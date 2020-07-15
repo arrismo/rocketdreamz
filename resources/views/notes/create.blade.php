@@ -22,7 +22,14 @@
 	    </input>
 
 	<div>
+	<div class="form-group">
+		<label for="body">
+			Note Body
+		</label>
+		<input class="form-control" type="text" name="title"> 
+	    </input>
 
+	 </div>
 		<input class="btn btn-primary" type="submit" value="Done"> 
 	    </input>
 

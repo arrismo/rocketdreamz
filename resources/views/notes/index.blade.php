@@ -19,7 +19,7 @@
 
 		</h1> 
 		<div class="pull-xs-left">
-			<a class="btn btn-primary" href="{{route('notes.createNote',$notebook->id)}}" role="button">
+			<a class="btn btn-primary" href="{{route('createNote',$notebook->id)}}" role="button">
 				New Note +
 			</a>
 		</div>

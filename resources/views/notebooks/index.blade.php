@@ -77,7 +77,7 @@
                 <div class="col-sm-6 col-md-3" >
                     <div class="card">
                         <div class="card-block">
-                            <a href="{{route("notebooks.show")}}">
+                            <a href="{{route("notebooks.show",$notebook->id)}}">
                                 <h4 class="card-header">
                                     {{$notebook->name}}
                                 </h4>
@@ -86,7 +86,7 @@
                         
                         <p> some text </p>
                         <div class="card-footer">
-                            <a class="card-link" href="{{route("notebooks.edit")}}">
+                        <a class="card-link" href="{{route("notebooks.edit",$notebook->id)}}">
                                 Edit Notebook
                             </a>
                             <form action="/notebooks/{{$notebook->id}}" class="pull-xs-right5 card-link" method="POST" style="display:inline">

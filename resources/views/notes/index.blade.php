@@ -38,7 +38,7 @@
 				{{$note->body}}
 			</p>
 
-			<a class="btn btn-sm btn-info pull-xs-left" href="#">
+			<a class="btn btn-sm btn-info pull-xs-left" href="{{route('notes.edit')}}">
 				Edit 
 			</a>
 			<form action="#" class="pull-xs-right" method="POST">

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Note;
+
 class NotesController extends Controller
 {
     /**
@@ -34,6 +36,13 @@ class NotesController extends Controller
      */
     public function store(Request $request)
     {
+        $inputData= $request->all();
+
+        Note::create($inputData);
+
+        $notebookId=$request->notebook_id;
+
+        return redirect()->route('notebooks.show',compact('notebookId'));
         //
     }
 
@@ -56,6 +65,9 @@ class NotesController extends Controller
      */
     public function edit($id)
     {
+
+        $note= Note::find($Id);
+        return view('notes.edit',compact('note'));
         //
     }
 

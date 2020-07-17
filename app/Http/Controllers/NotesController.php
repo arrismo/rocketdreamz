@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Note;
 
+use App\Http\Requests;
+
+
+
 class NotesController extends Controller
 {
     /**
@@ -54,7 +58,10 @@ class NotesController extends Controller
      */
     public function show($id)
     {
-        //
+        $note=Note::find($id);
+
+        return view('notes.show',compact('note'));
+        
     }
 
     /**
@@ -66,7 +73,7 @@ class NotesController extends Controller
     public function edit($id)
     {
 
-        $note= Note::find($Id);
+        $note= Note::find($id);
         return view('notes.edit',compact('note'));
         //
     }
@@ -80,7 +87,12 @@ class NotesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+ $inputData= $request->all();
+
+        $note=Note::find($id);
+        $note->update($inputData);
+
+        return redirect()->route('notebooks.show',$note->notebook_id);
     }
 
     /**
@@ -91,7 +103,9 @@ class NotesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Note::destroy($id);
+        return back();
+    
     }
 
     public function createNote($notebookId)

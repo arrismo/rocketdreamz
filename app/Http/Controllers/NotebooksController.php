@@ -39,7 +39,7 @@ class NotebooksController extends Controller
 
 
 
-return view('notes.index', compact('notes','notebook'));
+        return view('notes.index', compact('notes','notebook'));
 
 
 	}

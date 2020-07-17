@@ -38,7 +38,7 @@ Route::resource('notebooks','NotebooksController');
 
 Route::resource('notes','NotesController');
 
-Route::get('notes/{notebookId}/createNote','NotesController@createNote')->name('createNote');
+Route::get('notes/{notebookId}/createNote','NotesController@createNote')->name('notes.createNote');
 
 
 });

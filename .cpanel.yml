@@ -1,7 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/rockeqmh/public_html/
-    - /bin/cp -r * $DEPLOYPATH 
-    - /bin/cp ./public_html/js/*.js $DEPLOYPATH/public_html/js
-    - /bin/cp ./public_html/css/*.css $DEPLOYPATH/public_html/css
+    - export DEPLOYPATH=/home/rockeqmh/public_html 
+    - /bin/cp -r * $DEPLOYPATH

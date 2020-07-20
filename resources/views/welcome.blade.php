@@ -91,10 +91,7 @@
   </span>
   </div>
 
-  <footer>
-    
-    <p>Copyright © 2017 All rights reserved.</p>
-</footer>
+  
 
 
 

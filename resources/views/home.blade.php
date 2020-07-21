@@ -4,7 +4,9 @@
 <html>
 <head>
 		<meta charset="utf-8">
-    <title>rocket dreamz</title>
+    <title>rocketdreamz</title>
+
+    <link rel="icon" href="{{asset('images/favicon.ico') }}">
    <link href="{{ asset('css/main.css') }}" rel="stylesheet"> 
    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 

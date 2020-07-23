@@ -63,9 +63,9 @@
 <div id="stars3"></div>
 <div id="title">
 <a class="navbar-brand">rocketdreamz</a>
-    <h1> {{Auth::user()->name}}'s Dream Notebook </h1>
+    <h1> {{Auth::user()->name}}'s Dream's </h1>
     <p>
-  <a class="btn btn-lg shadow" style="border-radius: .6rem; background-color: white;"   href="/notebooks" role="button"> Click Here to view your notebooks </a>
+  <a class="btn btn-lg shadow" style="border-radius: .6rem; background-color: white;"   href="/notebooks" role="button"> Enter </a>
 </p>
 
 

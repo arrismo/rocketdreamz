@@ -35,8 +35,10 @@
     <div class="navbar-nav" style="padding-left: 642px;">
 
            <li class="nav-item dropdown">
-                <a id="navbarDropdown" style="color: white;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                   Welcome {{ Auth::user()->name }} <span class="caret"></span>
+
+
+                <a id="navbarDropdown" style="color: white;" class="nav-link dropdown-toggle"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -50,6 +52,9 @@
                      @csrf
                    </form>
                  </div>
+
+
+
             </li>
 
     </div>
@@ -63,7 +68,7 @@
 <div id="stars3"></div>
 <div id="title">
 <a class="navbar-brand">rocketdreamz</a>
-    <h1> {{Auth::user()->name}}'s Dream's </h1>
+    <h1> {{Auth::user()->name}}'s Dreams </h1>
     <p>
   <a class="btn btn-lg shadow" style="border-radius: .6rem; background-color: white;"   href="/notebooks" role="button"> Enter </a>
 </p>

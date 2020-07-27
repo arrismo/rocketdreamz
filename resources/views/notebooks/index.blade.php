@@ -23,10 +23,10 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
+    <div class="navbar-nav ml-auto">
       
            <li class="nav-item dropdown">
-                <a id="navbarDropdown" style="color: white" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                <a id="navbarDropdown" style="color: white; float:left;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                   Welcome  {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -54,12 +54,14 @@
 
 <div class="container text-center">
 
-                <h1 class="pull-xs-left" style="color: white">
+                {{-- <h1 class="pull-xs-left" style="color: white">
                     {{ Auth::user()->name }} Dreams
-                </h1>
+                </h1> --}}
+
+
                 <div class="pull-xs-right">
-                    <a class="btn " style="background-color: red" href="/notebooks/create" role="button">
-                        New Dream +
+                    <a class="btn btn-lg" style="background-color: red; margin-top: 290px;" href="/notebooks/create" role="button">
+                        Add New Dream 
                     </a>
                 </div>
 

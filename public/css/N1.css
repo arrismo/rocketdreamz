@@ -1,4 +1,1 @@
 
-body{
-	background-image: url("{{ asset('assets/img/stars.jpeg') }}")
-}

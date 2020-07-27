@@ -55,11 +55,11 @@
 <div class="container text-center">
 
                 <h1 class="pull-xs-left" style="color: white">
-                    Your Notebooks
+                    {{ Auth::user()->name }} Dreams
                 </h1>
                 <div class="pull-xs-right">
-                    <a class="btn btn-primary" href="/notebooks/create" role="button">
-                        New NoteBook +
+                    <a class="btn " style="background-color: red" href="/notebooks/create" role="button">
+                        New Dream +
                     </a>
                 </div>
 

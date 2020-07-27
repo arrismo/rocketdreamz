@@ -18,7 +18,7 @@
 
 <div id="app">
 	<nav class="navbar navbar-expand-lg " style="background: linear-gradient(to right, #434343, #000000);">
-  <a class="navbar-brand" style="color: white" href="#">rocketdreamz</a>
+  <a class="navbar-brand" style="color: white" href="/home">rocketdreamz</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -60,7 +60,7 @@
 
 
                 <div class="pull-xs-right">
-                    <a class="btn btn-lg" style="background-color: red; margin-top: 290px;" href="/notebooks/create" role="button">
+                    <a class="btn btn-lg" style="background-color: red; " href="/notebooks/create" role="button">
                         Add New Dream 
                     </a>
                 </div>
@@ -77,10 +77,10 @@
 
                @foreach($notebooks as $notebook)
                 <div class="col-sm-6 col-md-3" >
-                    <div class="card">
+                    <div class="card" style="box-shadow: 0 .20rem 2rem rgb(236, 9, 9) !important; border:none;">
                         <div class="card-block">
                             <a href="{{route("notebooks.show",$notebook->id)}}">
-                                <h4 class="card-header">
+                                <h4 class="card-header" style="background-color:black; color:white;text-align: center;">
                                     {{$notebook->name}}
                                 </h4>
                             </a>

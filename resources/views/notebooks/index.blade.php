@@ -14,11 +14,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body style="background: linear-gradient(to right, #434343, #000000);">
 
 <div id="app">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">rocketdreamz</a>
+	<nav class="navbar navbar-expand-lg " style="background: linear-gradient(to right, #434343, #000000);">
+  <a class="navbar-brand" style="color: white" href="#">rocketdreamz</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -26,7 +26,7 @@
     <div class="navbar-nav">
       
            <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                <a id="navbarDropdown" style="color: white" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                   Welcome  {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -54,7 +54,7 @@
 
 <div class="container text-center">
 
-                <h1 class="pull-xs-left">
+                <h1 class="pull-xs-left" style="color: white">
                     Your Notebooks
                 </h1>
                 <div class="pull-xs-right">

@@ -60,7 +60,7 @@
 
 
                 <div class="pull-xs-right">
-                    <a class="btn btn-lg" style="background-color: red; " href="/notebooks/create" role="button">
+                    <a class="btn btn-lg" style="background-color: white; " href="/notebooks/create" role="button">
                         Add New Dream 
                     </a>
                 </div>
@@ -87,7 +87,7 @@
                         </div>
                         <div class="card-footer" style="background-color:black">
                         <a class="card-link" style="color:white" href="{{route("notebooks.edit",$notebook->id)}}">
-                                Edit Notebook
+                                Edit Folder
                             </a>
                             <form action="/notebooks/{{$notebook->id}}" class="pull-xs-right5 card-link" method="POST" style="display:inline">
 

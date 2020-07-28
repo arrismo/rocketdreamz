@@ -8,16 +8,20 @@ use App\Note;
 
 use App\Http\Requests;
 
-
-
 class NotesController extends Controller
 {
+    
+
     /**
-     * Display a listing of the resource.
+     * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    
+    public function createNote($notebookId)
+    {
+        return view('notes.create')->with('id',$notebookId);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -26,15 +30,19 @@ class NotesController extends Controller
      */
     public function store(Request $request)
     {
-        $inputData= $request->all();
+        
+        $this->validate($request,[
+            'title'=>'required|max:20|unique:notes,title',
+            'body'=>'required|min:50'
 
-       Note::create($request->all());
+            ]);
+
+
+        Note::create($request->all());
 
         $notebookId=$request->notebook_id;
 
         return redirect()->route('notebooks.show',compact('notebookId'));
-
-        //
     }
 
     /**
@@ -48,7 +56,6 @@ class NotesController extends Controller
         $note=Note::find($id);
 
         return view('notes.show',compact('note'));
-        
     }
 
     /**
@@ -59,10 +66,8 @@ class NotesController extends Controller
      */
     public function edit($id)
     {
-
         $note= Note::find($id);
         return view('notes.edit',compact('note'));
-        //
     }
 
     /**
@@ -74,12 +79,13 @@ class NotesController extends Controller
      */
     public function update(Request $request, $id)
     {
-       $inputData= $request->all();
+        $inputData= $request->all();
 
         $note=Note::find($id);
         $note->update($inputData);
 
         return redirect()->route('notebooks.show',$note->notebook_id);
+        
     }
 
     /**
@@ -92,16 +98,7 @@ class NotesController extends Controller
     {
         Note::destroy($id);
         return back();
+    }
+
     
-    }
-
-
-
-    public function createNote($notebookId)
-    {
-        return view('notes.create')->with('id',$notebookId);
-
-
-
-    }
 }

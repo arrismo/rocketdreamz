@@ -102,5 +102,6 @@ class NotesController extends Controller
         return view('notes.create')->with('id',$notebookId);
 
 
+
     }
 }

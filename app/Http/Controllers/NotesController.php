@@ -28,15 +28,12 @@ class NotesController extends Controller
     {
         $inputData= $request->all();
 
-        Note::create($inputData);
+       Note::create($request->all());
 
         $notebookId=$request->notebook_id;
 
         return redirect()->route('notebooks.show',compact('notebookId'));
 
-
-
-        
         //
     }
 
@@ -77,7 +74,7 @@ class NotesController extends Controller
      */
     public function update(Request $request, $id)
     {
- $inputData= $request->all();
+       $inputData= $request->all();
 
         $note=Note::find($id);
         $note->update($inputData);
@@ -97,6 +94,8 @@ class NotesController extends Controller
         return back();
     
     }
+
+
 
     public function createNote($notebookId)
     {

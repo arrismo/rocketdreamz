@@ -59,7 +59,7 @@
 <form action="/notebooks" method="POST">
 	{{csrf_field()}}
 
-	<div class="form-group">
+	<div class="form-group" style="text-align: center">
 		<label for="name"> 
 		Folder Name
 	    </label>
@@ -71,16 +71,15 @@
      border-bottom-color: #ecf0f1;
      border-top-style: none; 
      border-right-style: none; 
-     border-left-style: none;    
+     border-left-style: none;  
+     background: transparent;  
 
      " 
-
-
-	placeholder="Name (required)" required />
+ required />
 
 	<div>
 
-		<input class="btn btn-primary" type="submit" value="Done"> 
+		<input class="btn" style="background-color: black" type="submit" value="Done"> 
 	    </input>
 
 

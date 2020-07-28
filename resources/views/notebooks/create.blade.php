@@ -52,19 +52,31 @@
   </div>
 
 
-	<h1 style="text-align: center"> Create Notebook </h1>
+	<h1 style="text-align: center"> Create Folder </h1>
+
+
 
 <form action="/notebooks" method="POST">
 	{{csrf_field()}}
 
 	<div class="form-group">
 		<label for="name"> 
-		Notebook Name
+		Folder Name
 	    </label>
 
 
-		<input class="form-control" type="text" name="name"> 
-	    </input>
+	<input type="text" name="name" class="formStyle" 
+	style="border-bottom-width: 1px; 
+     border-bottom-style: solid; 
+     border-bottom-color: #ecf0f1;
+     border-top-style: none; 
+     border-right-style: none; 
+     border-left-style: none;    
+
+     " 
+
+
+	placeholder="Name (required)" required />
 
 	<div>
 

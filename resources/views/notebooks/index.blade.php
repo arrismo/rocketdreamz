@@ -61,7 +61,7 @@
 
                 <div class="pull-xs-right">
                     <a class="btn btn-lg" style="background-color: white; " href="/notebooks/create" role="button">
-                        Add New Dream 
+                        Add New Folder
                     </a>
                 </div>
 

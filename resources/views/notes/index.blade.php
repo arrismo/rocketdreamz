@@ -34,24 +34,19 @@
 </div>
 
 
-
-
-
 		@foreach($notes as $note)
 	<div class="format" >
 			<a href="{{route('notes.show',$note->id)}}">
-				<h4 class="card-title">
-					{{$note->title}}
-				</h4>
+
+	       <h4 class="card-title">  
+	       	{{ucfirst($note->title)}} </h4>
 			</a>
 
-			<p class="text">
-				{{$note->body}}
-			</p>
+	<p class="text"> {{$note->body}} </p>
 
 
         <div style="display:felx; flex-wrap:wrap; ">
-	         <a class="btn btn-sm btn-info pull-xs-left" style="margin-right: 10px" href="{{route('notes.edit',$note->id)}}">
+<a class="btn btn-sm btn-info pull-xs-left" style="margin-right: 10px" href="{{route('notes.edit',$note->id)}}">
 				Edit 
 			</a>
 			<form action="{{route('notes.destroy',$note->id)}}" class="pull-xs-right" method="POST">

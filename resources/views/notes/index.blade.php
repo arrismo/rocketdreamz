@@ -13,14 +13,14 @@
 </head>
 <body>
 
-	<div class="container"> 
-		<h1 class="pull-xs-left">
-			Your Notes
+	<div class="container" > 
+		<h1 class="pull-xs-left" style="text-align: center">
+			Your Files
 
 		</h1> 
 		<div class="pull-xs-left">
-			<a class="btn btn-primary" href="{{route('notes.createNote',$notebook->id)}}" role="button">
-				New Note +
+<a class="btn " style="text-align: center; background-color: black; color:white;" href="{{route('notes.createNote',$notebook->id)}}" role="button">
+				Add New File 
 			</a>
 		</div>
 

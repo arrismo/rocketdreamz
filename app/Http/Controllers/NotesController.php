@@ -17,21 +17,7 @@ class NotesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -40,13 +26,22 @@ class NotesController extends Controller
      */
     public function store(Request $request)
     {
-        $inputData= $request->all();
+       $this->validate($request,[
+            'title'=>'required|max:20|unique:notes,title',
+            'body'=>'required|min:50'
 
-        Note::create($inputData);
+            ]);
+
+
+        Note::create($request->all());
 
         $notebookId=$request->notebook_id;
 
-        return redirect()->route('notebooks.show',compact('notebookId'));
+        return redirect()->route('notebooks.show',compact('notebookId'));t()->route('notebooks.show',compact('notebookId'));
+
+
+
+        
         //
     }
 

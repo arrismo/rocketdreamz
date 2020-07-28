@@ -5,7 +5,6 @@
 <head>
 	<title>rocketdreamz</title>
 
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'/>
 
 
 <!-- 
@@ -19,7 +18,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
 -->
-<link href="{{ asset('css/ncreate.css') }}" rel="stylesheet">
+
+<link href="{{ URL::asset('css/ncreate.css') }}" rel="stylesheet" type="text/css" >
 
 </head>
 <body>

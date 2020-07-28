@@ -7,7 +7,7 @@
 </head>
 <body>
 
-	<h1> Create Notes</h1>
+	<h1> Create New File</h1>
 
 <form action="{{route('notes.store')}}" method="POST">
         {{csrf_field()}}
@@ -30,6 +30,7 @@
         
         <input class="btn btn-primary" type="submit" value="Done">
         </input>
+        
     </form>
 </div>
 

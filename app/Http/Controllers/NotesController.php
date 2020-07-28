@@ -26,18 +26,13 @@ class NotesController extends Controller
      */
     public function store(Request $request)
     {
-       $this->validate($request,[
-            'title'=>'required|max:20|unique:notes,title',
-            'body'=>'required|min:50'
+        $inputData= $request->all();
 
-            ]);
-
-
-        Note::create($request->all());
+        Note::create($inputData);
 
         $notebookId=$request->notebook_id;
 
-        return redirect()->route('notebooks.show',compact('notebookId'));t()->route('notebooks.show',compact('notebookId'));
+        return redirect()->route('notebooks.show',compact('notebookId'));
 
 
 

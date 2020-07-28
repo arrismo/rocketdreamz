@@ -18,7 +18,8 @@
 			Your Files
 
 		</h1> 
-		<div class="pull-xs-left">
+		<div class="pull-xs-left" style="text-align: center; padding-bottom: 20px;">
+
 <a class="btn " style="text-align: center; background-color: black; color:white;" href="{{route('notes.createNote',$notebook->id)}}" role="button">
 				Add New File 
 			</a>
@@ -27,7 +28,9 @@
 
 
 		@foreach($notes as $note)
-		<div class="card card-block">
+		<div class="card" style="margin-right: 80px; margin-left: 80px;">
+
+
 			<a href="{{route('notes.show',$note->id)}}">
 				<h4 class="card-title">
 					{{$note->title}}
@@ -38,8 +41,9 @@
 				{{$note->body}}
 			</p>
 
-	<a class="btn btn-sm btn-info pull-xs-left" 
-	href="{{route('notes.edit',$note->id)}}">
+
+         <div class="row">
+	         <a class="btn btn-sm btn-info pull-xs-left" href="{{route('notes.edit',$note->id)}}">
 				Edit 
 			</a>
 			<form action="{{route('notes.destroy',$note->id)}}" class="pull-xs-right" method="POST">
@@ -48,7 +52,9 @@
 				<input class="btn btn-sm btn-danger" type="submit" value="Delete">
 				
 			</form>
+
 		</div>
+	</div>
 
 		@endforeach
 

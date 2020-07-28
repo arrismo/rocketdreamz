@@ -13,6 +13,10 @@
 </head>
 <body>
 
+<div style="background: #FF4444;
+  height: 180px;
+  border-top: 20px solid #CC0000;">
+  
 	<div class="container" > 
 		<h1 class="pull-xs-left" style="text-align: center">
 			Your Files
@@ -24,6 +28,8 @@
 				Add New File 
 			</a>
 		</div>
+
+</div>
 
 
 
@@ -42,8 +48,8 @@
 			</p>
 
 
-         <div class="row">
-	         <a class="btn btn-sm btn-info pull-xs-left" href="{{route('notes.edit',$note->id)}}">
+        <div style="display:felx; flex-wrap:wrap; ">
+	         <a class="btn btn-sm btn-info pull-xs-left" style="margin-right: 10px" href="{{route('notes.edit',$note->id)}}">
 				Edit 
 			</a>
 			<form action="{{route('notes.destroy',$note->id)}}" class="pull-xs-right" method="POST">
@@ -52,7 +58,6 @@
 				<input class="btn btn-sm btn-danger" type="submit" value="Delete">
 				
 			</form>
-
 		</div>
 	</div>
 

@@ -85,10 +85,8 @@
                                 </h4>
                             </a>
                         </div>
-                        
-                        <p> some text </p>
-                        <div class="card-footer">
-                        <a class="card-link" href="{{route("notebooks.edit",$notebook->id)}}">
+                        <div class="card-footer" style="background-color:black">
+                        <a class="card-link" style="color:white" href="{{route("notebooks.edit",$notebook->id)}}">
                                 Edit Notebook
                             </a>
                             <form action="/notebooks/{{$notebook->id}}" class="pull-xs-right5 card-link" method="POST" style="display:inline">
@@ -96,7 +94,7 @@
                             	{{csrf_field()}}
                             	{{method_field('DELETE')}}
 
-                                <input class="btn btn-sm btn-danger" type="submit" value="Delete">
+                                <input class="btn btn-sm btn-danger" type="submit" value="Delete" style="margin-left: 80px;">
                                 </input>
                             </form>
                         </div>

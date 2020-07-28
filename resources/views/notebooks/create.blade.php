@@ -79,7 +79,7 @@
 
 	<div>
 
-		<input class="btn" style="background-color: black" type="submit" value="Done"> 
+		<input class="btn" style="background-color: black; color: white" type="submit" value="Done"> 
 	    </input>
 
 

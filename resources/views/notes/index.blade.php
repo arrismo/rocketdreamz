@@ -13,12 +13,10 @@
 </head>
 <body>
 
-<div style="background: #FF4444;
-  height: 180px;
-  border-top: 20px solid #CC0000;">
-  
+<div style="background: #FF4444; height: 180px; border-top: 20px solid #CC0000;">
+
 	<div class="container" > 
-		<h1 class="pull-xs-left" style="text-align: center">
+		<h1 class="pull-xs-left" style="text-align: center; color: white;">
 			Your Files
 
 		</h1> 
@@ -29,21 +27,22 @@
 			</a>
 		</div>
 
+     </div>
 </div>
 
 
 
+
+
 		@foreach($notes as $note)
-		<div class="card" style="margin-right: 80px; margin-left: 80px;">
-
-
+	<div class="format" >
 			<a href="{{route('notes.show',$note->id)}}">
 				<h4 class="card-title">
 					{{$note->title}}
 				</h4>
 			</a>
 
-			<p class="card-text">
+			<p class="text">
 				{{$note->body}}
 			</p>
 
@@ -60,6 +59,7 @@
 			</form>
 		</div>
 	</div>
+
 
 		@endforeach
 

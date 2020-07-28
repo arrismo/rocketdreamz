@@ -45,7 +45,6 @@
     </ul>
   </div>
 
-<div class="folder"></div>
 
 	
 	<h1 style="text-align: center"> Edit Folder </h1>

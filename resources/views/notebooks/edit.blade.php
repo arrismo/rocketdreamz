@@ -45,6 +45,7 @@
     </ul>
   </div>
 
+<div class="folder"></div>
 
 	
 	<h1 style="text-align: center"> Edit Folder </h1>
@@ -56,7 +57,7 @@
 
 	<div class="form-group" style="text-align: center">
 		<label for="name"> 
-		Folder Name
+		New Folder Name
 	    </label>
 
 
